@@ -1126,7 +1126,7 @@ end
         puts'        \ ______/ V`-,     '.red
         puts'         }        /~~'.red
         puts'        /_)^ --,r'.red
-        puts'    |_|      |_| '.red
+        puts'       |_|      |_| '.red
         puts""
         puts "-----------------------------"
     elsif draw?
