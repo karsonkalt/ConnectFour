@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require_relative '../lib/connect_four.rb'
+require 'colorize'
+
+game = ConnectFour.new
+game.play
