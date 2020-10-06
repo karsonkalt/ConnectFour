@@ -235,18 +235,9 @@ end
     puts'     \ ______/ V`-,'.red
     puts'      }        /~~'.red
     puts'     /_)^ --,r'.red
-    print'    |_|      |_| '.red
-    sleep(0.2)
-    print"\r     |_|      |_| ".red
-    sleep(0.2)
-    print"\r    |_|      |_| ".red
-    sleep(0.2)
-    print"\r     |_|      |_| ".red
-    sleep(0.2)
-    print"\r    |_|      |_| ".red
-    sleep(0.2)
-    print"\r     |_|      |_| ".red
+    puts'    |_|      |_| '.red
     puts""
+    sleep(0.5)
 
     def generate_move_options(previous_board)
       if previous_board != nil
@@ -445,33 +436,33 @@ end
     # evaluate moves
     # if winning space, take it
     if won?(computer_board_option_1)
-      puts "MOVE TYPE: Take winning move"
-      puts "COLUMN SELECTED: Column 1"
+      # puts "MOVE TYPE: Take winning move"
+      # puts "COLUMN SELECTED: Column 1"
       move(1, @token, @board)
       display_board(@board)
     elsif won?(computer_board_option_2)
-      puts "MOVE TYPE: Take winning move"
-      puts "COLUMN SELECTED: Column 2"
+      # puts "MOVE TYPE: Take winning move"
+      # puts "COLUMN SELECTED: Column 2"
       move(2, @token, @board)
       display_board(@board)
     elsif won?(computer_board_option_3)
-      puts "MOVE TYPE: Take winning move"
-      puts "COLUMN SELECTED: Column 3"
+      # puts "MOVE TYPE: Take winning move"
+      # puts "COLUMN SELECTED: Column 3"
       move(3, @token, @board)
       display_board(@board)
     elsif won?(computer_board_option_4)
-      puts "MOVE TYPE: Take winning move"
-      puts "COLUMN SELECTED: Column 4"
+      # puts "MOVE TYPE: Take winning move"
+      # puts "COLUMN SELECTED: Column 4"
       move(4, @token, @board)
       display_board(@board)
     elsif won?(computer_board_option_5)
-      puts "MOVE TYPE: Take winning move"
-      puts "COLUMN SELECTED: Column 5"
+      # puts "MOVE TYPE: Take winning move"
+      # puts "COLUMN SELECTED: Column 5"
       move(5, @token, @board)
       display_board(@board)
     elsif won?(computer_board_option_6)
-      puts "MOVE TYPE: Take winning move"
-      puts "COLUMN SELECTED: Column 6"
+      # puts "MOVE TYPE: Take winning move"
+      # puts "COLUMN SELECTED: Column 6"
       move(6, @token, @board)
       display_board(@board)
     else
@@ -506,33 +497,33 @@ end
 
       #if opponent can win in their next move, take that space
       if won?(computer_board_option_1)
-        puts "MOVE TYPE: Take opponent's winning move"
-        puts "COLUMN SELECTED: Column 1"
+        # puts "MOVE TYPE: Take opponent's winning move"
+        # puts "COLUMN SELECTED: Column 1"
         move(1, @token, @board)
         display_board(@board)
       elsif won?(computer_board_option_2)
-        puts "MOVE TYPE: Take opponent's winning move"
-        puts "COLUMN SELECTED: Column 2"
+        # puts "MOVE TYPE: Take opponent's winning move"
+        # puts "COLUMN SELECTED: Column 2"
         move(2, @token, @board)
         display_board(@board)
       elsif won?(computer_board_option_3)
-        puts "MOVE TYPE: Take opponent's winning move"
-        puts "COLUMN SELECTED: Column 3"
+        # puts "MOVE TYPE: Take opponent's winning move"
+        # puts "COLUMN SELECTED: Column 3"
         move(3, @token, @board)
         display_board(@board)
       elsif won?(computer_board_option_4)
-        puts "MOVE TYPE: Take opponent's winning move"
-        puts "COLUMN SELECTED: Column 4"
+        # puts "MOVE TYPE: Take opponent's winning move"
+        # puts "COLUMN SELECTED: Column 4"
         move(4, @token, @board)
         display_board(@board)
       elsif won?(computer_board_option_5)
-        puts "MOVE TYPE: Take opponent's winning move"
-        puts "COLUMN SELECTED: Column 5"
+        # puts "MOVE TYPE: Take opponent's winning move"
+        # puts "COLUMN SELECTED: Column 5"
         move(5, @token, @board)
         display_board(@board)
       elsif won?(computer_board_option_6)
-        puts "MOVE TYPE: Take opponent's winning move"
-        puts "COLUMN SELECTED: Column 6"
+        # puts "MOVE TYPE: Take opponent's winning move"
+        # puts "COLUMN SELECTED: Column 6"
         move(6, @token, @board)
         display_board(@board)
       else
@@ -541,119 +532,119 @@ end
 
       ###### NEW!
 # #T1
-      puts "T1"
-      puts "-------"
+      # puts "T1"
+      # puts "-------"
       t1_move_options = generate_move_options(@board)
       t1_boards = generate_boards(@board, t1_move_options, @token)
       t1_evaluation = generate_board_scores(t1_boards, @token, @opponent_token)
       t1_avg = avg_board_scores(t1_evaluation)
 
-      puts "AVAILABLE MOVE OPTIONS #{t1_move_options}"
-      puts "MOVE SCORES #{t1_evaluation}"
-      puts "MOVE SCORE AVG #{t1_avg}"
-      puts "-------"
+      # puts "AVAILABLE MOVE OPTIONS #{t1_move_options}"
+      # puts "MOVE SCORES #{t1_evaluation}"
+      # puts "MOVE SCORE AVG #{t1_avg}"
+      # puts "-------"
 #
 #
 # #T2
-      puts "T2, T1[0]"
-      puts "-------"
+      # puts "T2, T1[0]"
+      # puts "-------"
       t2_t1_0_move_options = generate_move_options(t1_boards[0])
       t2_t1_0_boards = generate_boards(t1_boards[0], t2_t1_0_move_options, @opponent_token)
       t2_t1_0_evaluation = generate_board_scores(t2_t1_0_boards, @token, @opponent_token)
       t2_t1_0_avg = avg_board_scores(t2_t1_0_evaluation)
 
-      puts "AVAILABLE MOVE OPTIONS #{t2_t1_0_move_options}"
-      puts "MOVE SCORES #{t2_t1_0_evaluation}"
-      puts "MOVE SCORE AVG #{t2_t1_0_avg}"
-      puts "-------"
+      # puts "AVAILABLE MOVE OPTIONS #{t2_t1_0_move_options}"
+      # puts "MOVE SCORES #{t2_t1_0_evaluation}"
+      # puts "MOVE SCORE AVG #{t2_t1_0_avg}"
+      # puts "-------"
       #
       #
-      puts "T2, T1[1]"
-      puts "-------"
+      # puts "T2, T1[1]"
+      # puts "-------"
       t2_t1_1_move_options = generate_move_options(t1_boards[1])
       t2_t1_1_boards = generate_boards(t1_boards[1], t2_t1_1_move_options, @opponent_token)
       t2_t1_1_evaluation = generate_board_scores(t2_t1_1_boards, @token, @opponent_token)
       t2_t1_1_avg = avg_board_scores(t2_t1_1_evaluation)
 
-      puts "AVAILABLE MOVE OPTIONS #{t2_t1_1_move_options}"
-      puts "MOVE SCORES #{t2_t1_1_evaluation}"
-      puts "MOVE SCORE AVG #{t2_t1_1_avg}"
-      puts "-------"
+      # puts "AVAILABLE MOVE OPTIONS #{t2_t1_1_move_options}"
+      # puts "MOVE SCORES #{t2_t1_1_evaluation}"
+      # puts "MOVE SCORE AVG #{t2_t1_1_avg}"
+      # puts "-------"
       #
       #
-      puts "T2, T1[2]"
-      puts "-------"
+      # puts "T2, T1[2]"
+      # puts "-------"
       t2_t1_2_move_options = generate_move_options(t1_boards[2])
       t2_t1_2_boards = generate_boards(t1_boards[2], t2_t1_2_move_options, @opponent_token)
       t2_t1_2_evaluation = generate_board_scores(t2_t1_2_boards, @token, @opponent_token)
       t2_t1_2_avg = avg_board_scores(t2_t1_2_evaluation)
 
-      puts "AVAILABLE MOVE OPTIONS #{t2_t1_2_move_options}"
-      puts "MOVE SCORES #{t2_t1_2_evaluation}"
-      puts "MOVE SCORE AVG #{t2_t1_2_avg}"
-      puts "-------"
+      # puts "AVAILABLE MOVE OPTIONS #{t2_t1_2_move_options}"
+      # puts "MOVE SCORES #{t2_t1_2_evaluation}"
+      # puts "MOVE SCORE AVG #{t2_t1_2_avg}"
+      # puts "-------"
       #
       #
-      puts "T2, T1[3]"
-      puts "-------"
+      # puts "T2, T1[3]"
+      # puts "-------"
       t2_t1_3_move_options = generate_move_options(t1_boards[3])
       t2_t1_3_boards = generate_boards(t1_boards[3], t2_t1_3_move_options, @opponent_token)
       t2_t1_3_evaluation = generate_board_scores(t2_t1_3_boards, @token, @opponent_token)
       t2_t1_3_avg = avg_board_scores(t2_t1_3_evaluation)
 
-      puts "AVAILABLE MOVE OPTIONS #{t2_t1_3_move_options}"
-      puts "MOVE SCORES #{t2_t1_3_evaluation}"
-      puts "MOVE SCORE AVG #{t2_t1_3_avg}"
-      puts "-------"
+      # puts "AVAILABLE MOVE OPTIONS #{t2_t1_3_move_options}"
+      # puts "MOVE SCORES #{t2_t1_3_evaluation}"
+      # puts "MOVE SCORE AVG #{t2_t1_3_avg}"
+      # puts "-------"
       #
       #
-      puts "T2, T1[4]"
-      puts "-------"
+      # puts "T2, T1[4]"
+      # puts "-------"
       t2_t1_4_move_options = generate_move_options(t1_boards[4])
       t2_t1_4_boards = generate_boards(t1_boards[4], t2_t1_4_move_options, @opponent_token)
       t2_t1_4_evaluation = generate_board_scores(t2_t1_4_boards, @token, @opponent_token)
       t2_t1_4_avg = avg_board_scores(t2_t1_4_evaluation)
 
-      puts "AVAILABLE MOVE OPTIONS #{t2_t1_4_move_options}"
-      puts "MOVE SCORES #{t2_t1_4_evaluation}"
-      puts "MOVE SCORE AVG #{t2_t1_4_avg}"
-      puts "-------"
+      # puts "AVAILABLE MOVE OPTIONS #{t2_t1_4_move_options}"
+      # puts "MOVE SCORES #{t2_t1_4_evaluation}"
+      # puts "MOVE SCORE AVG #{t2_t1_4_avg}"
+      # puts "-------"
       #
       #
-      puts "T2, T1[5]"
-      puts "-------"
+      # puts "T2, T1[5]"
+      # puts "-------"
       t2_t1_5_move_options = generate_move_options(t1_boards[5])
       t2_t1_5_boards = generate_boards(t1_boards[5], t2_t1_5_move_options, @opponent_token)
       t2_t1_5_evaluation = generate_board_scores(t2_t1_5_boards, @token, @opponent_token)
       t2_t1_5_avg = avg_board_scores(t2_t1_5_evaluation)
 
-      puts "AVAILABLE MOVE OPTIONS #{t2_t1_5_move_options}"
-      puts "MOVE SCORES #{t2_t1_5_evaluation}"
-      puts "MOVE SCORE AVG #{t2_t1_5_avg}"
-      puts "-------"
+      # puts "AVAILABLE MOVE OPTIONS #{t2_t1_5_move_options}"
+      # puts "MOVE SCORES #{t2_t1_5_evaluation}"
+      # puts "MOVE SCORE AVG #{t2_t1_5_avg}"
+      # puts "-------"
 
 
 # T3
-      puts "-------"
-      puts "T3"
-      puts "-------"
+      # puts "-------"
+      # puts "T3"
+      # puts "-------"
 
 
 
 
       def depth3(previousboard)
         if previousboard != nil
-          puts "-------"
+          # puts "-------"
           move_options = generate_move_options(previousboard)
           currentboards = generate_boards(previousboard, move_options, @token)
           evaluation = generate_board_scores(currentboards, @token, @opponent_token)
           av = avg_board_scores(evaluation)
           max = max_board_scores(evaluation)
-          puts "AVAILABLE MOVE OPTIONS #{move_options}"
-          puts "MOVE SCORES #{evaluation}"
-          puts "MOVE SCORE AVG #{av}"
-          puts "MOVE SCORE MAX #{max}"
-          puts "-------"
+          # puts "AVAILABLE MOVE OPTIONS #{move_options}"
+          # puts "MOVE SCORES #{evaluation}"
+          # puts "MOVE SCORE AVG #{av}"
+          # puts "MOVE SCORE MAX #{max}"
+          # puts "-------"
           # return av
           return av
         else nil
@@ -777,28 +768,28 @@ end
         else nil
         end
       ]
-      puts "THE NEW MOVE SCORES WHEN LOOKING AT T3 ARE: #{new_t1_evaluation}"
+      # puts "THE NEW MOVE SCORES WHEN LOOKING AT T3 ARE: #{new_t1_evaluation}"
 
       if new_t1_evaluation.uniq.length != 1
         nonils = remove_nils(new_t1_evaluation)
         best_move = nonils.max
         input = new_t1_evaluation.index(best_move) + 1
         if new_t1_evaluation.count(best_move) == 1
-          puts "MOVE TYPE: Pick the max score. Only one max."
-          puts "COLUMN SELECTED: #{input}"
+          # puts "MOVE TYPE: Pick the max score. Only one max."
+          # puts "COLUMN SELECTED: #{input}"
           move(input, @token, @board)
           display_board(@board)
         else
-          puts "MOVE TYPE: Pick the max score. There are multiple max."
+          # puts "MOVE TYPE: Pick the max score. There are multiple max."
           # make array of best move locations
           move_options = new_t1_evaluation.each_index.select{|i| new_t1_evaluation[i] == best_move}
           move_options.map!{|i| i + 1}
-          puts "OPTIONS TO RANDOMLY SELECTR FROM: #{move_options}"
+          # puts "OPTIONS TO RANDOMLY SELECTR FROM: #{move_options}"
 
           # randomly pick a spot
           random_move_selection = rand(move_options.count)
           move_selected = move_options[random_move_selection]
-          puts "COLUMN SELECTED: #{move_selected}"
+          # puts "COLUMN SELECTED: #{move_selected}"
           move(move_selected, @token, @board)
           display_board(@board)
 
@@ -817,34 +808,34 @@ end
           end
         end
 
-        puts "Play in Columns 2 - 5 ?: #{centered?(center_random)}"
+        # puts "Play in Columns 2 - 5 ?: #{centered?(center_random)}"
 
         if centered?(center_random) == true
           random = rand(4) + 1
-          puts "Random number 2 - 5 generated: #{random}"
+          # puts "Random number 2 - 5 generated: #{random}"
           if valid_move?(random, @board)
             move(random, @token, @board)
             display_board(@board)
           else
-            puts "Regenerating random number"
+            # puts "Regenerating random number"
             generate_random_number(token)
           end
         else
         random = rand(6) + 1
-        puts "Random number 1-6 generated: #{random}"
+        # puts "Random number 1-6 generated: #{random}"
         if valid_move?(random, @board)
           move(random, @token, @board)
           display_board(@board)
 
         else
-          puts "Regenerating random number"
+          # puts "Regenerating random number"
           generate_random_number(@token)
         end
       end
 
       end
 
-      puts "MOVE TYPE: Generate random number"
+      # puts "MOVE TYPE: Generate random number"
       generate_random_number(@token)
 
       #user input for now until I can automate
